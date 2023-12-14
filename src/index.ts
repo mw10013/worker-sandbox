@@ -1,12 +1,7 @@
-/**
- * Welcome to Cloudflare Workers! This is your first worker.
- *
- * - Run `npm run dev` in your terminal to start a development server
- * - Open a browser tab at http://localhost:8787/ to see your worker in action
- * - Run `npm run deploy` to publish your worker
- *
- * Learn more at https://developers.cloudflare.com/workers/
- */
+// @ts-expect-error ts(7016)
+import * as base32 from 'thirty-two';
+// import { Buffer } from 'node:buffer';
+import { Buffer } from 'node:buffer';
 
 export interface Env {
 	// Example binding to KV. Learn more at https://developers.cloudflare.com/workers/runtime-apis/kv/
@@ -27,6 +22,12 @@ export interface Env {
 
 export default {
 	async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
-		return new Response('Hello Worker!');
+		// const data = {
+		// 	encode: base32.encode('node').toString(),
+		// 	decode: base32.decode('NZXWIZI=').toString(),
+		// };
+		// return new Response('Hello Worker!');
+		return new Response(Buffer.from('hello buffer'));
+		// return new Response(JSON.stringify(data, null, 2));
 	},
 };
