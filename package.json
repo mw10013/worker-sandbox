@@ -14,6 +14,9 @@
   },
   "dependencies": {
     "@epic-web/totp": "^1.1.2",
+    "@paddle/paddle-node-sdk": "^1.0.1",
+    "@paddle/paddle-node-sdk-dynamic-import": "github:mw10013/paddle-node-sdk#dynamic-import",
+    "@paddle/paddle-node-sdk-node-prefix": "github:mw10013/paddle-node-sdk#e170637f34b76bec39c6de2b4377a3cb1a776eee",
     "@types/node": "^20.11.24"
   }
 }
