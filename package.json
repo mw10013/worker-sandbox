@@ -11,5 +11,9 @@
     "@cloudflare/workers-types": "^4.20240222.0",
     "typescript": "^5.0.4",
     "wrangler": "^3.0.0"
+  },
+  "dependencies": {
+    "@epic-web/totp": "^1.1.2",
+    "@types/node": "^20.11.24"
   }
 }
